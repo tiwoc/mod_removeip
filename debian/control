@@ -1,0 +1,19 @@
+Source: libapache2-mod-removeip
+Maintainer: Daniel Seither <post@tiwoc.de>
+Section: web
+Priority: optional
+Standards-Version: 3.9.3
+Build-Depends: debhelper (>= 8), apache2-threaded-dev, cdbs
+
+Package: libapache2-mod-removeip
+Architecture: any
+Depends: ${shlib:Depends}, ${misc:Depends}, apache2.2-common
+Description: Module to remove or shorten IP addresses in the Apache httpd
+ This package provides the removeip module for the Apache 2 webserver. This
+ module allows for overwriting Apache's environment variable REMOTE_ADDR with a
+ fixed value, while optionally retaining a prefix of the address to allow for
+ basic web analytics. The purpose is to anonymize all logs written by Apache and
+ to prevent web applications from accessing the original IP address.
+ .
+ Please be advised that activating this module may cause unexpected side effects
+ to the behavior of your web applications.
